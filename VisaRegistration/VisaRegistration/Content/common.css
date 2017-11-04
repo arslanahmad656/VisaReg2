@@ -1,0 +1,602 @@
+﻿/*--------------------------- Loader Popup -------------------------------- */
+#div_loading {
+    display: none;
+    left: 47%;
+    margin-top: -50px;
+    position: fixed;
+    top: 42%;
+    z-index: 40001;
+}
+
+#div_GrayBackround {
+    -moz-opacity: .75;
+    background-color: #000000;
+    bottom: 0;
+    display: none;
+    filter: alpha(opacity=75);
+    height: 100%;
+    left: 0;
+    opacity: .75;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 301;
+}
+
+.modal-popup-width {
+    max-width: 70%;
+    width: auto;
+}
+
+#div_overlay_for_popup {
+    -moz-opacity: .75;
+    background-color: #000000;
+    bottom: 0;
+    filter: alpha(opacity=75);
+    height: 100%;
+    left: 0;
+    opacity: .75;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 10001;
+    display: none;
+}
+
+
+.div_popup_parent {
+    position: absolute;
+    /*border: 2px solid red;*/
+    left: 0px;
+    top: -50px;
+    right: 0px;
+    bottom: 00px;
+    display: none;
+    text-align: center;
+    /*padding-top: 80px;*/
+    overflow: auto;
+    z-index: 20001;
+    /*width: 100% !important;*/
+}
+
+.div_popup_child {
+    display: inline-block;
+    text-align: left;
+    /*width: 40% !important;*/
+    background-color: white;
+    border-radius: 10px;
+    padding-bottom: 20px;
+    overflow: auto;
+    width: 80% !important;
+}
+
+
+.popup_header_text {
+    padding-left: 20px;
+    /*font-weight: bold;*/
+    font-size: 16px;
+    padding-top: 20px;
+    margin-top: 0;
+}
+
+.popup_header {
+    height: 60px;
+    width: 100%;
+    /*background-color: #149aed !important;*/
+    border-radius: 9px;
+    color: white;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    padding: 0;
+}
+
+.popup_closeButton {
+    float: right;
+    padding: 2px;
+    cursor: pointer;
+    width: 22px;
+    height: 22px;
+}
+
+.popup_padding_div {
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-right: 10px;
+}
+
+
+.popup_heading {
+    font-weight: bold;
+}
+
+
+
+@media only screen and (max-width: 1101px) {
+
+
+    /*.div_popup_parent {
+       width:100%;
+    }*/
+    .div_popup_child {
+        width: 80% !important;
+    }
+    /*.div_popup_child {
+        width: 70% !important;
+    }*/
+}
+
+
+@media only screen and (max-width: 767px) {
+    /*.div_popup_child {
+        width: 90% !important;
+    }*/
+
+    .div_popup_child {
+        width: 80% !important;
+    }
+}
+
+.btn-big-width {
+    width: 165px;
+}
+
+.lbl-eserv-note {
+    color: red;
+}
+
+.legend-class {
+    margin-left: 1em;
+    padding: 0.2em 1em;
+    color: white;
+    width: auto;
+    font-size: 14px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.fieldset-custom {
+    margin: 0px;
+}
+
+
+
+.input-group-addon {
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1;
+    color: #555;
+    text-align: center;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+
+.form-control-searchIcon {
+    position: absolute;
+    top: 0px;
+    right: 13px;
+    /*left:0px;*/
+    z-index: 2;
+    display: block;
+    width: 34px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    pointer-events: none;
+}
+
+.btn-create-app-margin {
+    margin-right: 28px;
+}
+
+@media only screen and (max-width: 991px) {
+
+    .btn-create-app-margin {
+        margin-right: 58px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+
+    .btn-create-app-margin {
+        margin-right: 10px;
+    }
+}
+
+
+.ui-menu-item a {
+    text-decoration: none;
+}
+
+.ui-autocomplete {
+    max-height: 300px !important;
+    overflow-y: auto !important; /* prevent horizontal scrollbar */
+    overflow-x: hidden !important; /* add padding to account for vertical scrollbar */
+    z-index: 1000 !important;
+}
+
+ui-autocomplete.ui-widget-content {
+    background-color: white !important;
+    box-shadow: 0px 3px 3px rgba(0,0,0,.2);
+    border-radius: 0px !important;
+}
+
+
+#ui-id-1 a {
+    border: none;
+    margin-left: 0;
+}
+
+    #ui-id-1 a:hover {
+        border: none;
+        margin-left: 0;
+        color: black;
+    }
+
+#ui-id-1 li {
+    border: none;
+    margin-left: 0;
+    -webkit-transition: background-color 0.3s ease-out;
+    -moz-transition: background-color 0.3s ease-out;
+    -o-transition: background-color 0.3s ease-out;
+    transition: background-color 0.3s ease-out;
+}
+
+    #ui-id-1 li:hover {
+        background-color: rgba(22, 151, 160, .30);
+        border: none;
+        margin-left: 0;
+    }
+
+/* Interaction states
+----------------------------------*/
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    border: none !important;
+    background-color: #ccc !important;
+    background: none !important;
+    font-weight: bold;
+    color: #3383bb;
+    font-size: 0.75em !important;
+    left: 0;
+}
+
+    .ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited {
+        color: #3383bb;
+        text-decoration: none;
+    }
+
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus {
+    border: none;
+    background: transparent !important;
+    font-weight: bold;
+    /*color: #599fcf;*/
+}
+
+    .ui-state-hover a, .ui-state-hover a:hover {
+        /*color: #599fcf;*/
+        text-decoration: none;
+    }
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
+    border: none !important;
+    background-color: #999999;
+    background: none !important;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+    .ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited {
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+.ui-widget :active {
+    outline: none;
+}
+
+/*ui-state-highlight{
+            font-weight:bold;
+        }*/
+
+.popup_padding_div ul li {
+    padding-bottom: 10px;
+}
+
+
+/* To enable PRINT option in application form TFWRI-5799 */
+@media print {
+    .breadcrumb {
+        display: none;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .topLinks {
+        display: none;
+    }
+
+    #ctl00_headerDiv {
+        display: none;
+    }
+
+    .header {
+        margin: 10px 0px 0px 0px;
+    }
+
+    .footer {
+        display: none;
+        margin-bottom: 20px;
+    }
+
+    div.divFooter {
+        position: fixed;
+    }
+
+    #ctl00_dvServiceCard {
+        display: none;
+    }
+
+    #divServiceCount {
+        display: none;
+    }
+
+    #div_service_icons {
+        display: none;
+    }
+
+    #ctl00_ContentPlaceHolder1_ucAppForm_btnClear {
+        display: none;
+    }
+
+    body {
+        -webkit-print-color-adjust: exact !important;
+        margin: -1.6cm 0cm 0cm 0cm !important;
+    }
+
+    #ctl00_ContentPlaceHolder1_ucAppForm_btnSave {
+        display: none;
+    }
+
+    #ctl00_ContentPlaceHolder1_ucAppForm_btnSaveAndAttachment {
+        display: none;
+    }
+
+    #ctl00_ContentPlaceHolder1_ucAppForm_btnSaveAndGoup {
+        display: none;
+    }
+
+    #livechat-compact-container {
+        display: none;
+    }
+
+    #livechat-full {
+        display: none;
+    }
+
+    #ctl00_ContentPlaceHolder1_btnNext {
+        -webkit-print-color-adjust: exact !important;
+    }
+
+    #ctl00_menuSub_divMenuMain {
+        display: none;
+    }
+
+    .wizard .current {
+        color: black !important;
+    }
+
+    #ctl00_ContentPlaceHolder1_StepNavigation_step1 {
+        color: black !important;
+    }
+
+    .btnBlack {
+        display: none;
+    }
+
+    .btnRed {
+        display: none;
+    }
+
+    .TopMenu {
+        display: none;
+    }
+
+
+    #a_serviceWorkFlowDiagram {
+        display: none;
+    }
+
+    #imgFormShortCuts {
+        display: none;
+    }
+
+
+    .form-div-Custom-Top-Padding {
+        color: red !important;
+        font-size: larger;
+    }
+
+    .show-print {
+        display: inline-block !important;
+    }
+
+    .hide-print {
+        display: none !important;
+    }
+
+    a[href]:after {
+        content: none !important;
+    }
+
+    a:link:after, a:visited:after {
+        content: none !important;
+    }
+
+    .list-group-iem {
+        display: inline-block !important;
+    }
+
+    .showTitle {
+        display: inline-block !important;
+    }
+
+
+    .wrap-table > tbody > tr > td .wrap-table-label {
+        overflow: visible !important;
+        display: inline-block !important;
+    }
+
+    .wrap-table > thead > tr:last-child, .wrap-table > thead > tr:last-child th, .wrap-table > tbody > tr > th {
+        overflow: visible !important;
+        display: inline-block !important;
+    }
+
+    .wrap-table > thead > tr > td {
+        display: inline-block;
+    }
+
+        .wrap-table > thead > tr > td div .col-sm-1 {
+            float: right;
+        }
+
+    .wrap-table > thead > tr {
+        height: auto;
+    }
+
+        .wrap-table > thead > tr > td {
+            font: normal;
+        }
+
+    .wrap-table {
+        table-layout: auto !important;
+    }
+
+        .wrap-table > tbody > tr > td:before {
+        }
+
+        .wrap-table > tbody > tr > td:first-child {
+            font-weight: bold;
+        }
+
+        .wrap-table.style-second-td > tbody > tr > td:nth-child(2) {
+            font-weight: bold;
+        }
+
+        .wrap-table colgroup col {
+            width: 100% !important;
+        }
+
+        .wrap-table > tbody > tr > td:before {
+        }
+
+        .wrap-table > tbody > tr > td:first-child {
+        }
+
+        .wrap-table.style-second-td > tbody > tr > td:nth-child(2) {
+        }
+
+    #tourbtn {
+        display: none;
+    }
+
+    #Datel_Fawri_Web_Portal_Accompanied1_Remove {
+        display: none;
+    }
+
+    @page {
+        margin: 1.5cm;
+    }
+
+
+    #divServiceCount {
+        display: inline-block !important;
+    }
+
+    .mainheading {
+        color: #cc0000 !important;
+        font-size: 20px !important;
+        text-transform: uppercase !important;
+    }
+
+    .form-group {
+        /*page-break-inside: avoid !important;
+        page-break-after: avoid !important;*/
+    }
+
+    /*.form-div-Custom {
+        page-break-inside: inherit !important;
+        page-break-after: inherit !important;
+    }*/
+
+    .col-xs-9 {
+        color: black !important;
+        font-size: 30px !important;
+    }
+
+    .titlesSubHeader {
+        color: #cc0000 !important;
+        font-size: 20px !important;
+        text-transform: uppercase !important;
+    }
+
+    .bg-info {
+        margin: 2cm 2cm 2cm 2cm !important;
+        font-size: larger;
+        background-color: #d9edf7 !important;
+    }
+
+    #Datel_Fawri_Web_Portal_ApplicationManagementService_RefundApplication_Captcha1_GRP {
+        display: none;
+    }
+
+    #Datel_Fawri_Web_Portal_ApplicationManagementEstablishment_FawriApplicationDetailEstablishment_Captcha1_GRP {
+        display: none;
+    }
+
+    #ctl00_ContentPlaceHolder1_btnSearch {
+        display: none;
+    }
+
+    .CaptchaRefresh {
+        pointer-events: none !important;
+        cursor: none !important;
+    }
+
+    .btn {
+        display: none !important;
+    }
+
+    .jquery-ratings-full {
+        border: solid 1px yellow;
+        background:transparent url('../JScript/ratings/full-star.png') !important;
+        background-repeat: no-repeat !important;
+    }
+
+    #RatingMessageP {
+        font-size: larger !important;
+        font-weight: bold;
+        font-size: x-large;
+    }
+
+    #printForm {
+        display: none !important;
+    }
+
+    .tour{
+        display: none !important;
+    }
+
+    .div_popup_parent{
+        display: none !important;
+    }
+
+    .modal-content{
+         display: none !important;
+    }
+}

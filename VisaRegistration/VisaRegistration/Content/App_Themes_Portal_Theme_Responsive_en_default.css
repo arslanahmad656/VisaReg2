@@ -1,0 +1,61 @@
+﻿.form-div-Custom {
+    padding-bottom: 0px;
+}
+
+    .form-div-Custom h3 {
+        color: #CC0000;
+        font-weight: normal;
+    }
+
+    .form-div-Custom .initial-input {
+        padding-right: 0;
+        min-width: 50px;
+    }
+
+.form-div-Custom-Top-Padding {
+    padding-top: 30px;
+}
+
+    .form-div-Custom-Top-Padding h3 {
+        color: #CC0000;
+        font-weight: normal;
+    }
+
+    .form-div-Custom-Top-Padding .initial-input {
+        padding-right: 0;
+    }
+
+.mainheading {
+    text-transform: uppercase;
+    font-size: 20px;
+    margin: 0 0 15px;
+    color: #cc0000;
+}
+
+.LinkCursor {
+    cursor: pointer;
+}
+
+input[type=text] {
+    padding: 4px 4px;
+}
+
+.HideObject {
+    display: none;
+}
+
+@media (min-width:1200px) {
+    .container {
+        width: 1000px;
+    }
+}
+
+.NoPadding {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.searchInput {
+    padding: 4px 12px !important;
+    padding-right: 30px !important;
+}

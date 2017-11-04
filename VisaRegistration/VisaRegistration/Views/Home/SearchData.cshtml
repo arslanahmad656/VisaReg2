@@ -1,0 +1,315 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div id="ctl00_divTopMenu" class="tnav topNav forceDisplay">
+    <!-- forceDisplay class only for pre-login pages-->
+    <ul class="list-inline">
+        <li>
+            <a id="ctl00_lnkHome" title="Click to go home page" href="javascript:__doPostBack('ctl00$lnkHome','')">Home</a>
+        </li>
+        <li>
+            <a id="ctl00_lnkeVisaInquiry" title="Click for eVisa Inquiry" href="javascript:__doPostBack('ctl00$lnkeVisaInquiry','')">eVisa Inquiry</a>
+        </li>
+        <li>
+
+        <li>
+            <a onclick="window.open('/Documents/Fawri User Manual V1.1.pdf');return false;" id="ctl00_lnkUserManual" title="Click to download user manual" href="javascript:__doPostBack('ctl00$lnkUserManual','')">User Manual</a>
+        </li>
+        <li>
+            <a id="ctl00_lnkFAQ" title="Click to go to FAQ page" href="javascript:__doPostBack('ctl00$lnkFAQ','')">FAQs</a>
+        </li>
+        <li>
+            <a id="lnkContactUs" title='Contact Us' href='https://www.moi.gov.ae/en/contactus.aspx'
+               target="_New">
+                Contact Us
+            </a>
+        </li>
+    </ul>
+</div>
+
+<div id="ctl00_headerDiv" class="banner" style="background-color:white">
+    <div class="uaeLogo pull-left">
+        <h2 class="pull-left">
+            <a href="https://www.moi.gov.ae/" target="_blank">
+                <img src="~/Content/img/logo.png" id="ctl00_Image1" class="img-responsive" alt="UAE Logo" style="border-width:0px;" />
+            </a>
+        </h2>
+        <div class="hgroup">
+            <h3>
+                United Arab Emirates
+            </h3>
+            <h4>
+                Ministry of Interior
+            </h4>
+        </div>
+    </div>
+    <div class="appLogo pull-left">
+
+        <h1>
+            <img id="ctl00_Image2" class="img-responsive" alt="Fawri Logo" style="border-width:0px;" src="~/Content/img/fawri.png" />
+        </h1>
+    </div>
+</div>
+
+<div class="clearfix"></div>
+
+<div class="site-content">
+
+    <div id="ctl00_div1" class="row ttsdesc">
+        <div class="col-xs-9" style="font-size: 18px;">
+            <strong>
+                Login
+            </strong>
+        </div>
+    </div>
+
+    <form action="@Url.Action("ProcessSearchData")" method="post">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>
+                    <br />
+                    <div class="form-group">
+                        <label class="control-label col-sm-3">Select Service To Inquire<span class=Man>*</span>&nbsp;:&nbsp;</label>
+                        <div class="col-sm-9">
+                            <div class="row">
+                                <div class="col-xs-2 initial-input">
+                                    <input class="form-control" id="input-service" />
+                                </div>
+
+                                <div class="col-xs-8">
+                                    <select class="form-control" id="select-service">
+                                        <option value="" ID="" selected>---- Select Service ----</option>
+                                        <option value="1" ID="">Entry Permit Validity</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-3">Visa Number<span class=ManShowHide>*</span>&nbsp;:&nbsp;</label>
+                        <div class="col-sm-9">
+                            <div class="row">
+                                <div class="col-sm-7">
+                                    <div class="row">
+                                        <div class="col-xs-2 initial-input">
+                                            <input type="text" class="form-control NoPadding" placeholder="XXX" id="input-visa-1" name="input_visa_1"/>
+                                        </div>
+
+                                        <div class="col-xs-3 initial-input">
+                                            <input type="text" class="form-control NoPadding" placeholder="XXXX" id="input-visa-2" name="input_visa_2" />
+                                        </div>
+
+                                        <div class="col-xs-2 initial-input">
+                                            <input type="text" class="form-control NoPadding" placeholder="XX" id="input-visa-3" name="input_visa_3" />
+                                        </div>
+
+                                        <div class="col-xs-5 initial-input">
+                                            <input type="text" class="form-control NoPadding" placeholder="XXXXXXX" id="input-visa-4" name="input_visa_4" />
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-3">Full Name In English<span class=ManShowHide>*</span>&nbsp;:&nbsp;</label>
+                        <div class="col-sm-9">
+                            <div class="row">
+                                <div class="col-sm-7">
+                                    <input class="form-control NoPadding" type="text" id="input-name" name="fullname" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-3">Gender<span class=Man>*</span>&nbsp;:&nbsp;</label><div class="col-sm-7">
+
+                            <div class="col-sm-9">
+                                <div class="row">
+                                    <div class="col-xs-2">
+                                        <input class="form-control" id="input-gender" />
+                                    </div>
+
+                                    <div class="col-xs-10">
+                                        <select class="form-control" id="select-gender" name="input_gender">
+                                            <option value="" ID="" selected>---- Select Gender ----</option>
+                                            <option value="1">Male</option>
+                                            <option value="2">Female</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-3">Date of Birth<span class=ManShowHide>*</span>&nbsp;:&nbsp;</label>
+                        <div class="col-sm-9">
+                            <div class="row">
+                                <div class="col-xs-3 initial-input">
+                                    <select class="form-control NoPadding" id="select-dd" name="select_dd">
+                                        <option value="">DD</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-xs-3 initial-input">
+                                    <select class="form-control NoPadding" id="select-mmm" name="select_mmm">
+                                        <option value="" selected="">MMM</option>
+                                        <option value="1">Jan</option>
+                                        <option value="2">Feb</option>
+                                        <option value="3">Mar</option>
+                                        <option value="4">Apr</option>
+                                        <option value="5">May</option>
+                                        <option value="6">Jun</option>
+                                        <option value="7">Jul</option>
+                                        <option value="8">Aug</option>
+                                        <option value="9">Sep</option>
+                                        <option value="10">Oct</option>
+                                        <option value="11">Nov</option>
+                                        <option value="12">Dec</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-xs-3 initial-input">
+                                    <input type="number" step="1" min="1900" max="2067" class="form-control NoPadding" placeholder="YYYY" id="select-yyyy" name="select_yyyy" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-3">Nationality<span class=ManShowHide>*</span>&nbsp;:&nbsp;</label>
+                        <div class="col-sm-9">
+                            <div class="row">
+                                <div class="col-xs-1 initial-input">
+                                    <input type="text" class="form-control NoPadding" id="input-nationality" />
+                                </div>
+                                <div class="col-xs-7 initial-input">
+                                    <select class="form-control NoPadding" id="select-nationality" name="select_nationality">
+                                        <option value="" id="" selected="">---- Select Nationality ----</option>
+                                        <option value="490" title="***">***</option>
+                                        <option value="209" title="AFGHANISTANI">AFGHANISTANI</option>
+                                        <option value="300" title="AFRICAN COUNTRIES">AFRICAN COUNTRIES</option>
+                                        <option value="473" title="ALBANI">ALBANI</option>
+                                        <option value="276" title="ALFARO IELANDS">ALFARO IELANDS</option>
+                                        <option value="131" title="ALGERIAN">ALGERIAN</option>
+                                        <option value="502" title="AMERICAN">AMERICAN</option>
+                                        <option value="445" title="ANDORO">ANDORO</option>
+                                        <option value="305" title="ANJOLIAN">ANJOLIAN</option>
+                                        <option value="805" title="ANTIGUA AND BRABUDA">ANTIGUA AND BRABUDA</option>
+                                        <option value="251" title="ANTIGWA">ANTIGWA</option>
+                                        <option value="605" title="ARGENTNI">ARGENTNI</option>
+                                        <option value="263" title="ARMINIAN">ARMINIAN</option>
+                                        <option value="200" title="ASIAN">ASIAN</option>
+                                        <option value="441" title="ATICANI">ATICANI</option>
+                                        <option value="203" title="PAKISTANIAN">PAKISTANIAN</option>
+                                        <option></option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <br />
+
+
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <div class="row voffset2" style="align-content: center">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                @*<input type="submit" class="btn btnBlack" value="Back" />*@
+                                <button type="button" class="btn btnBlack">Back</button>
+                                <input type="submit" tabindex="1" class="btn btnBlack" value="Submit" />
+                                @*<input type="button" tabindex="3" class="btn btn-danger" value="Clear" />*@
+                                <button type="button" class="btn btn-danger">Clear</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr></tr>
+
+        </table>
+
+    </form>
+
+    
+</div>
+
+@section Scripts{
+
+    <script>
+        $('#select-service').change(function () {
+            $('#input-service').val($(this).val());
+        });
+        $('#input-service').change(function () {
+            $('#select-service').val($(this).val());
+        });
+
+        $('#input-visa-1').keyup(function () {
+            var str = $(this).val();
+            if (str.length >= 3) {
+                $(this).val(str.substring(0, 3));
+            }
+        });
+
+        $('#input-visa-2').keyup(function () {
+            var str = $(this).val();
+            if (str.length >= 4) {
+                $(this).val(str.substring(0, 4));
+            }
+        });
+
+        $('#input-visa-3').keyup(function () {
+            var str = $(this).val();
+            if (str.length >= 2) {
+                $(this).val(str.substring(0, 2));
+            }
+        });
+
+        $('#input-visa-4').keyup(function () {
+            var str = $(this).val();
+            if (str.length >= 7) {
+                $(this).val(str.substring(0, 7));
+            }
+        });
+
+        $('#select-gender').change(function () {
+            $('#input-gender').val($(this).val());
+        });
+
+        $('#input-gender').change(function () {
+            $('#select-gender').val($(this).val());
+        });
+
+        $('#select-mmm').change(function () {
+            var options = '';
+            for (let i = 1; i <= 31; i++) {
+                options += '<option value="' + i + '">' + i + '</option>';
+            }
+            $('#select-dd').html(options);
+        });
+
+        $('#select-nationality').change(function () {
+            $('#input-nationality').val($(this).val());
+        });
+
+        $('#input-nationality').change(function () {
+            $('#select-nationality').val($(this).val());
+        });
+
+    </script>
+
+
+}

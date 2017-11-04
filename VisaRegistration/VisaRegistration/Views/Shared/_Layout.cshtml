@@ -6,34 +6,240 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <link href="~/Content/App_Themes_Portal_Theme_Responsive_en_default.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-datepicker3.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-toggle.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-tour.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/common.css" rel="stylesheet" />
+    <link href="~/Content/custom.css" rel="stylesheet" />
+    <link href="~/Content/default.css" rel="stylesheet" />
+    <link href="~/Content/font-awesome.css" rel="stylesheet" />
+    <link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Content/main.css" rel="stylesheet" />
+    <link href="~/Content/normalize.css" rel="stylesheet" />
+    <link href="~/Content/responsive_style_red_md_en.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <link href="~/Content/uploadify.css" rel="stylesheet" />
 
+    <style>
+        .site-content {
+            background-color: white;
+            padding: 2% 4%;
+        }
+
+        .tnav.topNav.forceDisplay ul li a{
+            color: rgb(189, 152, 19);
+        }
+    </style>
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-                @Html.Partial("_LoginPartial")
-            </div>
-        </div>
-    </div>
     <div class="container body-content">
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <div class="container footer">
+                <div class="row footerLinks hide-md">
+                    <div class="col-md-10">
+                        <div>
+                            <ul class="list-inline">
+                                <li id="iTermsConditions">
+                                    <a id="lnkTermsConditions" title="Terms &amp; Conditions" href="http://moi.gov.ae/en/TermsConditions.aspx" target="_self">
+                                        Terms &amp; Conditions
+                                    </a>
+                                </li>
+                                <li id="iAccessibilityPolicy">
+                                    <a id="lnkAccessibilityPolicy" title="Accessibility Policy" href="http://moi.gov.ae/en/AccessbilityPolicy.aspx" target="_self">
+                                        Accessibility Policy
+                                    </a>
+                                </li>
+                                <li id="iPrivacyPolicy">
+                                    <a id="lnkPrivacyPolicy" title="Privacy Policy" href="http://moi.gov.ae/en/PrivacyPolicy.aspx" target="_self">
+                                        Privacy Policy
+                                    </a>
+                                </li>
+                                <li id="iSitemap">
+                                    <a id="lnkFawriSiteMap" href="sitemap.aspx">
+                                        Site Map
+                                    </a>
+                                </li>
+                                <li id="iCopyright">
+                                    <a id="lnkCopyright" title="Copyright" href="http://moi.gov.ae/en/Copyright.aspx" target="_self">
+                                        Copyright
+                                    </a>
+                                </li>
+                                <li id="iCustomerService">
+                                    <a id="lnkCustomerService" title="Customer Service Charter" href="https://www.moi.gov.ae/en/about.moi/genericcontent/citizen.charter.aspx" target="_blank">
+                                        Customer Service Charter
+                                    </a>
+                                </li>
+                                <li id="iDisclaimer" class="last">
+                                    <a id="lnkDisclaimer" title="Disclaimer" href="http://moi.gov.ae/en/Disclaimer.aspx" target="_self">
+                                        Disclaimer
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-2 contact-number">
+                        Contact Us: 8005000
+                    </div>
+                </div>
+                <div class="row footerContent">
+                    <div class="col-md-4 contentCol last-updated">
+                        <p class="info">
+                        </p><p>
+                            Page last updated on: Thu 12 Oct 2017 - 05:15 PM
+                        </p>
+                        Supports Microsoft Internet Explorer 8.0+, Firefox 2.0+, Safari 4.0+, Opera 6.0+, Chrome
+                        <p></p>
+                    </div>
+                    <div class="col-md-2 contentCol govt">
+
+
+                        <a href="http://government.ae/en" target="_blank">
+                            <img id="ctl00_eGovLogo" class="img-responsive" src="../../../Images/eGovLogo.png" style="border-width:0px;">
+                        </a>
+
+                    </div>
+                    <div class="col-md-2 contentCol connect">
+                        <h5>
+                            Connect With Us
+                        </h5>
+                        <ul class="list-inline">
+                            <li>
+                                <a href="https://www.facebook.com/AbuDhabiPolice" target="_Blank" title="Facebook">
+                                    <img id="ctl00_ctl00_Img1" src="../../../Images/icons/icoface.png" alt="Facebook" style="height:27px;width:27px;border-width:0px;">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/AbuDhabiPolice" target="_Blank" title="Twitter">
+                                    <img id="ctl00_ctl00_Img2" src="../../../Images/icons/icotwitter.png" alt="Twitter" style="height:27px;width:27px;border-width:0px;">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.youtube.com/user/theabudhabipolice" target="_Blank" title="Youtube">
+                                    <img id="ctl00_ctl00_Img3" src="../../../Images/icons/icotube.png" alt="Youtube" style="height:27px;width:27px;border-width:0px;">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://instagram.com/moiuae" target="_Blank" title="Instagram">
+                                    <img id="ctl00_ctl00_Img4" src="../../../Images/icons/iconinstagram.png" alt="Instagram" style="height:27px;width:27px;border-width:0px;">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2 contentCol plugin">
+                        <h5>
+                            Add-Ons &amp; Plug-Ins
+                        </h5>
+                        <ul class="list-inline">
+                            <li>
+                                <a href="http://www.adobe.com/downloads.html" target="_Blank" title="Flash">
+                                    <img id="ctl00_ctl00_Img5" src="../../../Images/icons/icoflash.png" alt="Flash" style="height:23px;width:23px;border-width:0px;">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://office.microsoft.com/en-us/downloads/office-online-file-converters-and-viewers-HA001044981.aspx" target="_Blank" title="Word">
+                                    <img id="ctl00_ctl00_Img6" src="../../../Images/icons/icoword.png" alt="Word" style="height:23px;width:23px;border-width:0px;">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"></a><a href="http://office.microsoft.com/en-us/downloads/office-online-file-converters-and-viewers-HA001044981.aspx" target="_Blank" title="Excel">
+                                    <img id="ctl00_ctl00_Img7" src="../../../Images/icons/icoexcel.png" alt="Excel" style="height:23px;width:22px;border-width:0px;">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.adobe.com/downloads.html" target="_Blank" title="Adobe">
+                                    <img id="ctl00_ctl00_Img8" src="../../../Images/icons/icopdf.png" alt="Adobe" style="height:23px;width:23px;border-width:0px;">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.java.com/en/download/index.jsp" target="_Blank" title="Java">
+                                    <img id="ctl00_ctl00_Img9" src="../../../Images/icons/icojava.png" alt="Java" style="height:23px;width:23px;border-width:0px;">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2 contentCol footerNav">
+                        <ul class="list-inline">
+                            <li id="iTermsConditions">
+                                <a id="lnkTermsConditions" title="Terms &amp; Conditions" meta:resourcekey="litTermsConditions" href="http://moi.gov.ae/en/TermsConditions.aspx" target="_self">
+                                    Terms &amp; Conditions
+                                </a>
+                            </li>
+                            <li id="iAccessibilityPolicy">
+                                <a id="lnkAccessibilityPolicy" title="Accessibility Policy" href="http://moi.gov.ae/en/AccessbilityPolicy.aspx" target="_self">
+                                    Accessibility Policy
+                                </a>
+                            </li>
+                            <li id="iPrivacyPolicy">
+                                <a id="lnkPrivacyPolicy" title="Privacy Policy" href="http://moi.gov.ae/en/PrivacyPolicy.aspx" target="_self">
+                                    Privacy Policy
+                                </a>
+                            </li>
+                            <li id="iSitemap">
+                                <a id="lnkFawriSiteMap" href="sitemap.aspx">
+                                    Site Map
+                                </a>
+                            </li>
+                            <li id="iCopyright">
+                                <a id="lnkCopyright" title="Copyright" href="http://moi.gov.ae/en/Copyright.aspx" target="_self">
+                                    Copyright
+                                </a>
+                            </li>
+                            <li id="iCustomerService">
+                                <a id="lnkCustomerService" title="Customer Service Charter" href="https://www.moi.gov.ae/en/about.moi/genericcontent/citizen.charter.aspx" target="_blank">
+                                    Customer Service Charter
+                                </a>
+                            </li>
+                            <li id="iDisclaimer" class="last">
+                                <a id="lnkDisclaimer" title="Disclaimer" href="http://moi.gov.ae/en/Disclaimer.aspx" target="_self">
+                                    Disclaimer
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2 contentCol mobile">
+                        <h5>
+                            Download Mobile Apps
+                        </h5>
+                        <ul class="list-inline">
+                            <li>
+                                <a href="https://play.google.com/store/apps/details?id=com.uaemoi.smartservices" target="_Blank" title="Android">
+                                    <img id="ctl00_imgGoogleApp" src="../../../Images/icons/icon_android.png" style="height:27px;width:27px;border-width:0px;">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://itunes.apple.com/ae/app/uae-moi/id768665731?ls=1&amp;mt=8" target="_Blank" title="Apple">
+                                    <img id="ctl00_imgAppleApp" src="../../../Images/icons/icon_apple.png" style="height:27px;width:27px;border-width:0px;">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://appworld.blackberry.com/webstore/content/42157888/?countrycode=AE&amp;lang=en" target="_Blank" title="Blackberry">
+                                    <img id="ctl00_imgBBApp" src="../../../Images/icons/icon_bb.png" style="height:27px;width:27px;border-width:0px;">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.windowsphone.com/ar-ae/store/app/uae-moi/9689222a-63ba-4c42-b808-34431677a32d" target="_Blank" title="Windows">
+                                    <img id="ctl00_imgWinApp" src="../../../Images/icons/icon_windows.png" style="height:27px;width:27px;border-width:0px;">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 bottom-copyrights">
+                        COPYRIGHT © 2017 - MINISTRY OF INTERIOR. ALL RIGHTS RESERVED.
+                    </div>
+                </div>
+                <div class="row poweredby">
+                    <a href="http://www.emaratech.ae/">
+                        <img id="ctl00_ctl00_imgPoweredBy" class="img-responsive" src="../../../Images/FawriTheme/emaratech-logo.png" alt="Engineered and powered by emaratech" style="border-width:0px;">
+                    </a>
+                </div>
+            </div>
         </footer>
     </div>
 

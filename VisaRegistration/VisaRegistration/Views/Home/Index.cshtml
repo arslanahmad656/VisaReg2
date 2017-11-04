@@ -2,30 +2,115 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+<div id="ctl00_divTopMenu" class="tnav topNav forceDisplay" style="color:rgb(189, 152, 19)">
+    <!-- forceDisplay class only for pre-login pages-->
+    <ul class="list-inline">
+        <li>
+            <a id="ctl00_lnkHome" title="Click to go home page" href="javascript:__doPostBack('ctl00$lnkHome','')">Home</a>
+        </li>
+        <li>
+            <a id="ctl00_lnkeVisaInquiry" title="Click for eVisa Inquiry" href="@Url.Action("SearchData", "Home")">eVisa Inquiry</a>
+        </li>
+        <li>
+
+        <li>
+            <a onclick="window.open('/Documents/Fawri User Manual V1.1.pdf');return false;" id="ctl00_lnkUserManual" title="Click to download user manual" href="javascript:__doPostBack('ctl00$lnkUserManual','')">User Manual</a>
+        </li>
+        <li>
+            <a id="ctl00_lnkFAQ" title="Click to go to FAQ page" href="javascript:__doPostBack('ctl00$lnkFAQ','')">FAQs</a>
+        </li>
+        <li>
+            <a id="lnkContactUs" title='Contact Us' href='https://www.moi.gov.ae/en/contactus.aspx'
+               target="_New">
+                Contact Us
+            </a>
+        </li>
+    </ul>
 </div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+<div id="ctl00_headerDiv" class="banner" style="background-color:white">
+    <div class="uaeLogo pull-left">
+        <h2 class="pull-left">
+            <a href="https://www.moi.gov.ae/" target="_blank">
+                <img src="~/Content/img/logo.png" id="ctl00_Image1" class="img-responsive" alt="UAE Logo" style="border-width:0px;" />
+            </a>
+        </h2>
+        <div class="hgroup">
+            <h3>
+                United Arab Emirates
+            </h3>
+            <h4>
+                Ministry of Interior
+            </h4>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+    <div class="appLogo pull-left">
+
+        <h1>
+            <img id="ctl00_Image2" class="img-responsive" alt="Fawri Logo" style="border-width:0px;" src="~/Content/img/fawri.png" />
+        </h1>
     </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+</div>
+
+<div class="clearfix"></div>
+
+<div class="site-content">
+
+    <div id="ctl00_div1" class="row ttsdesc">
+        <div class="col-xs-9" style="font-size: 18px;">
+            <strong>
+                Login
+            </strong>
+        </div>
     </div>
+
+    <form action="@Url.Action("Login", "Account")" method="post">
+        <table style="width: 100%;">
+            <tr>
+                <td>
+                    <br />
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-3">Username<span class=ManShowHide>*</span>&nbsp;:&nbsp;</label>
+                        <div class="col-sm-9">
+                            <div class="row">
+                                <div class="col-sm-7">
+                                    <input class="form-control NoPadding" type="text" id="input-username" name="input_username" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-3">Password<span class=ManShowHide>*</span>&nbsp;:&nbsp;</label>
+                        <div class="col-sm-9">
+                            <div class="row">
+                                <div class="col-sm-7">
+                                    <input class="form-control NoPadding" type="password" id="input-password" name="input_password" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br />
+
+
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <div class="row voffset2" style="align-content: center">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <input type="submit" tabindex="1" class="btn btnBlack" value="Log in" />
+                            </div>
+
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr></tr>
+
+        </table>
+    </form>
 </div>
